@@ -10,5 +10,8 @@
     "addressbook"
   ],
   "author": "Alex Sydorenko",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^5.1.0"
+  }
 }
