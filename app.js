@@ -4,4 +4,3 @@ const menu = new MenuController();
 
 menu.clear();
 menu.main();
-

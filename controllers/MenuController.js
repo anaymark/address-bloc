@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+let date = require('date-and-time');
 
 module.exports = class MenuController {
 	constructor(){
@@ -9,7 +10,8 @@ module.exports = class MenuController {
 			  message:"Please choose from an option below",
 			  choices:[
 			    "Add new contact",
-			    "Exit"
+			    "Exit",
+			    "Date and Time"
 			  ]
 		}
 	];
@@ -24,6 +26,10 @@ module.exports = class MenuController {
 					  break;
 					case "Exit":
 					  this.exit();
+					  break;
+					case "Date and Time":
+					  this.getDate();
+					  break;
 					default:
 					  console.log("Invalid input");
 					  this.main();
@@ -34,13 +40,19 @@ module.exports = class MenuController {
      		});
 		}
 
+		getDate(){
+			let now = new Date();
+			console.log(date.format(now, 'YYYY/MM/DD HH:mm:ss'));  
+			this.main();
+		}
+
 		clear(){
 			console.log("\x1Bc");
 		}
+
 		addContact(){
 			this.clear;
 			console.log('addContact called');
-			this.main();
 		}
 		exit(){
 			console.log("Thanks for using AddressBloc!")
