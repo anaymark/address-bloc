@@ -12,6 +12,7 @@
   "author": "Alex Sydorenko",
   "license": "ISC",
   "dependencies": {
+    "date-and-time": "^0.6.2",
     "inquirer": "^5.1.0"
   }
 }
